@@ -22,7 +22,7 @@ This is the Web Version of final result of "SafeCity Sexual Harassment Story Cla
 ## Demo
 Link : [https://safecity-streamlit.herokuapp.com/](https://safecity-streamlit.herokuapp.com)
 
-[![](https://imgur.com/FZLGfkn)](https://safecity-streamlit.herokuapp.com/)
+[https://imgur.com/FZLGfkn](https://safecity-streamlit.herokuapp.com/)
 
 ## Overview
 
