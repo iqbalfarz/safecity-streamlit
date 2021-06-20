@@ -1,6 +1,6 @@
 # SafeCity Sexual Harassment Story Classification
 
-This is the Web Version of final result of "SafeCity Sexual Harassment Story Classification" using Streamlit.
+This is the Web Version of the final result of "SafeCity Sexual Harassment Story Classification" using Streamlit.
 
 Official website to share your story: [Click Here](https://www.safecity.in)
 
@@ -30,28 +30,28 @@ Link : [https://safecity-streamlit.herokuapp.com/](https://safecity-streamlit.he
 
 
 ## Overview
-Safecity is a Platform as a Service(PaaS) product that powers communities, police and city government to prevent violence in public and private spaces. SafeCity technology stack collects and analyses crowdsourced, anonymous reports of violent crime, identifying patterns and key insights. 
-SafeCity is the largest online platform where people share their pesonal Sexual Harassment stories.
+Safecity is a Platform as a Service(PaaS) product that powers communities, police, and city government to prevent violence in public and private spaces. SafeCity technology stack collects and analyses crowdsourced, anonymous reports of violent crime, identifying patterns and key insights. 
+SafeCity is the largest online platform where people share their personal Sexual Harassment stories.
 
-Safecity is an initiative of the Red Dot Foundation based in Washingon DC, U.S.A and its sister concern Red Dot Foundation based in Mumbai, India. Our dataset is the world’s largest, with 25 participating cities/countries/organizations.
+Safecity is an initiative of the Red Dot Foundation based in Washington DC, U.S.A, and its sister concern Red Dot Foundation based in Mumbai, India. Our dataset is the world’s largest, with 25 participating cities/countries/organizations.
 
 ## Problem Statement
-Classifying the stories shared online among types of Harassment Like: Commenting, Ogling/Staring, Groping/Touching.
+Classifying the stories shared online among types of Harassment Like Commenting, Ogling/Staring, Groping/Touching.
 This problem is proposed as both **Binary** and **Multi-label Classification**.
 
 
 ## Source and useful links
 Data Source: https://github.com/swkarlekar/safecity
 
-YouTube : https://www.youtube.com/channel/UCM8Hln70jUqQpoDz9zPuTIg?sub_confirmation=1
+YouTube: https://www.youtube.com/channel/UCM8Hln70jUqQpoDz9zPuTIg?sub_confirmation=1
 
 Research paper: https://safecity.in/wp-content/uploads/2019/04/UNC-Chapel-Hill.pdf
 ### Limitations of research paper:
-1. Metrics used in research paper is not good to judge the model performance.
-    * Binary Classification: In research paper accuracy is used to judge the model. But, we know that dataset is imbalanced, So, It is good to use precision and recall to judge the model.(don't even use just f1-score)
-    * Multi-label classification: In research paper Hamming score and Exact-match(accuracy) is used but it is better to use bothe precision and recall for each label.(can get it by using Classification_report).
+1. Metric used in the research paper is not good to judge the model performance.
+    * Binary Classification: In the research paper, accuracy is used to judge the model. But, we know that the dataset is imbalanced, So, It is good to use precision and recall to judge the model. (don't even use just f1-score)
+    * Multi-label classification: In the research paper, Hamming score and the Exact-match(accuracy) are used but it is better to use the precision and recall for each label. (can get it by using Classification_report).
 
-Blog : https://medium.com/omdena/exploratory-data-analysis-of-the-worlds-biggest-sexual-harassment-database-107e7682c732
+Blog: https://medium.com/omdena/exploratory-data-analysis-of-the-worlds-biggest-sexual-harassment-database-107e7682c732
 
 Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-field-guide-to-machine-learning-video-series/
 
@@ -64,7 +64,7 @@ Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-fiel
 ## Mapping to Machine Learning Problem
 1.  ### Data
     a. Data Overview:
-    Refer : https://github.com/swkarlekar/safecity
+    Refer: https://github.com/swkarlekar/safecity
     All of the data is in 2 folders.
     * Folder 1(Binary Classification):
       * commenting_data:
@@ -86,7 +86,7 @@ Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-fiel
        
 **This data is for research purposes only and is publicly available at <http://maps.safecity.in/reports>. Please contact SafeCity moderators at <http://maps.safecity.in/contact> for permission before the use of this data. We thank the SafeCity moderators for their assistance with the data download.**
 
-2. ### Types of Machine Learing Problem
+2. ### Types of Machine Learning Problem
     * #### Single-Label Classification 
 
       * The data for single-label classification is given in two columns, with the first column being the description of the incident and the second column being 1 if the category of sexual harassment is present and 0 if it is not.   
@@ -99,7 +99,7 @@ Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-fiel
         | This incident took place in the evening.I was in the metro when two guys started staring. | 0 |
         | Catcalls and passing comments were two of the ghastly things the Delhi police at the International Airport put me and my friend through. It is appalling that the protectors and law enforcers at the airport can make someone so uncomfortable. |	0 |  
 
-        10% of each dataset was randomly selected and held-out for the test set. From the remaining training data, 10% was randomly selected and set aside for the development set. 
+        10% of each dataset was randomly selected and held out for the test set. From the remaining training data, 10% was randomly selected and set aside for the development set. 
 
         | Category | % Positive | 
         |---|---|
@@ -121,7 +121,7 @@ Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-fiel
         | This incident took place in the evening.I was in the metro when two guys started staring. |	0 |	1 |	0 |
         | Catcalls and passing comments were two of the ghastly things the Delhi police at the International Airport put me and my friend through. It is appalling that the protectors and law enforcers at the airport can make someone so uncomfortable. | 1 |	1 |	0 |
 
-        10% of the dataset was randomly selected and held-out for the test set. From the remaining training data, 10% was randomly selected and set aside for the development set. 
+        10% of the dataset was randomly selected and held out for the test set. From the remaining training data, 10% was randomly selected and set aside for the development set. 
 
         | Commenting | Ogling | Groping | Examples in Dataset | 
         |---|---|---|---|
@@ -137,13 +137,13 @@ Guide to Machine Learning by Facebook: https://research.fb.com/the-facebook-fiel
         There are 7201 training samples, 990 development samples, and 1701 test samples.   
 
 ## Model Training
-For Model training part [Click Here]()
+For the Model training part [Click Here]()
 
 ## Technical aspect
 I solved this problem using both Machine Learning and Deep Learning Algorithms
 1. ### Machine Learning:
   * Binary Classification:
-    * **Encoding**: For text enconding we use TF-IDF(Term-Frequency Inverse-Document Frequency).
+    * **Encoding**: For text encoding, I use TF-IDF(Term-Frequency Inverse-Document Frequency).
     * **ML Algorithms**: 
         * Logistic Regression
         * SVM(linear, 'rbf','ploy')
@@ -156,6 +156,7 @@ I solved this problem using both Machine Learning and Deep Learning Algorithms
     * **Performance Metrics**: 
         * Precision
         * Recall.
+        * AUC (Area Under Curve)
     * **Library**: scikit-learn
   * Multilabel Classification:
       *  **Agorithms**: 
@@ -167,17 +168,18 @@ I solved this problem using both Machine Learning and Deep Learning Algorithms
           * skmultilearn
       * **Performance Metrics**: 
           * Precision 
-          * Recall
+          * Recall :
           * Hamming score
-          * Hamming loss
-          * Exact math(accuracy) were used in Research Paper, But exact match is not the right metric to judge how model is performing on each label.
+          * Hamming loss: It is not interpretable for each label because it calculates loss for all the labels.
+          * Exact math(accuracy) was used in Research Paper, But the exact match is not the right metric to judge how the model is performing on each label.
+          * *I used Precision score and Recall score for each label.*
 2. ### Deep Learning: 
-    In Deep Learning, the only difference between Binary and Multi-label Classification is the last layer of Neural Network.
+    In Deep Learning, the only difference between Binary and Multi-label Classification is the last layer of the Neural Network.
     * **Encoding**:   
         * Used Embedding Layer to train our own embedding
         * Used Word2Vec pre-trained encoding for each word(50d, and 300d)
     * **DL Algorithms**:
-      * CNN: Used Conv1D, 1D convolution is used to preserve sequential relationship at some extent.
+      * CNN: Used Conv1D, 1D convolution is used to preserve sequential relationships to some extent.
       * RNN: Recurrent Neural Network, we used LSTM(Long Short Term Memory).
       * CNN-RNN: Combination of Conv1D and RNN
     * **Miscellaneous Details**:
@@ -190,15 +192,15 @@ I solved this problem using both Machine Learning and Deep Learning Algorithms
         
 
 ## Installation
-The code is written in python==3.9.5. If you want to install python,  [Click here](https://www.python.org/downloads/). Don't forget to upgrade python if you are lower version. upgrade using `pip install --upgrade python` . 
+The code is written in python==3.9.5. If you want to install python,  [Click here](https://www.python.org/downloads/). Don't forget to upgrade python if you are using a lower version. upgrade using `pip install --upgrade python`. 
 1. Clone the repository
 2. install requirements.txt:
     ```
-    pip isntall -r requirements.txt
+    pip install -r requirements.txt
     ```
     
 ## Run
-Run this project using below command on your local machine.
+Run this project using the below command on your local machine.
     ```
     streamlit run app.py
     ```    
@@ -225,8 +227,7 @@ Interpreted both Machine Learning and Deep Learning model using LIME(Local Inter
 ```
 ## Future Work
 1. To get more data.
-2. Use State-of-the-art algorithms like **BERT**(**B**i-directional **E**ncoding **R**epresentation from **T**ransformer).
-3. Try to use different trained model to classify each label.(Commenting, Ogling, Groping)
+2. Use state-of-the-art algorithms like **BERT**(**B**i-directional **E**ncoding **R**epresentation from **T**ransformer).
 
 ## Technologies used
 [![](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org)
@@ -243,6 +244,6 @@ Interpreted both Machine Learning and Deep Learning model using LIME(Local Inter
 [Muhammad Iqbal Bazmi](https://github.com/iqbal786786) |)
 
 ## Credits
-1. [Applied AI Course](https://www.appliedaicourse.com) : For teaching in-depth Machine Learning and Deep Learning
-2. [Krish Naik](https://www.youtube.com/channel/UCNU_lfiiWBdtULKOw6X0Dig) : For Heroku Developemnt and Github repository management.
+1. [Applied AI Course](https://www.appliedaicourse.com): For teaching in-depth Machine Learning and Deep Learning
+2. [Krish Naik](https://www.youtube.com/channel/UCNU_lfiiWBdtULKOw6X0Dig): For Heroku Developmnt and Github repository management.
 3. [SafeCity](https://www.safecity.in/) : For [research paper](https://safecity.in/wp-content/uploads/2019/04/UNC-Chapel-Hill.pdf) and [dataset](https://github.com/swkarlekar/safecity).
